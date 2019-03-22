@@ -1,0 +1,101 @@
+@mixin extraSmall {
+    @media screen and (max-width: 320px) {
+      @content;
+    }
+}
+
+@mixin small {
+    @media screen and (max-width: 767px) {
+      @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (max-width: 1280px) {
+      @content;
+    }
+}
+
+@mixin smallLaptop {
+    @media screen and (max-width: 1400px) {
+      @content;
+    }
+}
+
+@mixin Laptop {
+    @media screen and (max-width: 1700) {
+      @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (max-width: 1920px) {
+      @content;
+    }
+}
+
+@mixin placeholder {
+  &::-webkit-input-placeholder { @content; }
+  &:-moz-placeholder           { @content; }
+  &::-moz-placeholder          { @content; }
+  &:-ms-input-placeholder      { @content; }  
+}
+
+//end general styles
+
+// fonts-style
+
+@font-face {
+    font-family: TitilliumWeb-Light;
+    src: url('../fonts/TitilliumWeb-Light.ttf');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: TitilliumWeb-Regular;
+    src: url('../fonts/TitilliumWeb-Regular.ttf');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: TitilliumWeb-ExtraLight;
+    src: url('../fonts/TitilliumWeb-ExtraLight.ttf');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: SupernaturalKG;
+    src: url('../fonts/SuperNaturalKG.ttf');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: Triforce;
+    src: url('../fonts/TriForce.otf');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@mixin fontTW-light {
+    font-family: 'TitilliumWeb-Light', sans-serif;
+}
+
+@mixin fontTW-Regular {
+    font-family: 'TitilliumWeb-Regular', sans-serif;
+}
+
+@mixin fontTW-Extralight {
+    font-family: 'TitilliumWeb-ExtraLight', sans-serif;
+}
+
+@mixin fontKG {
+    font-family: 'SupernaturalKG', sans-serif;
+}
+
+@mixin fontTriforce{
+    font-family: 'Triforce', sans-serif;
+}

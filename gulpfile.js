@@ -12,20 +12,21 @@ const imagemin = require('gulp-imagemin');
 
 
 gulp.task('css', () => {
-  return gulp.src([
-    'src/sass/main.scss',
-    'src/sass/components/**/*.scss',
-    'src/sass/**/*.scss'
-  ]) 
-		.pipe(plumber()) 
+  return gulp
+    .src([
+      'src/sass/main.scss',
+      'src/sass/components/**/*.scss',
+      'src/sass/**/*.scss'
+    ]) 
+    .pipe(plumber())
 		.pipe(maps.init())
-		.pipe(sass()) // для препроцессора css - stylus 
+    .pipe(sass()) // для препроцессора css - sass 
 		.pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'],
 		{ cascade: true })) // для кроссбраузерности
 		.pipe(csso()) // минификация css
 		.pipe(rename(
 			{suffix:'.min', dirname: ''})) // для переименования конечных файлов css и для изменения конечной структуры проекта
-		.pipe(maps.write())
+    .pipe(maps.write())
 		.pipe(gulp.dest('dist/css/')) // сборка проекта с указанием конечной директории
 		.pipe(browserSync.reload({
 			stream: true})); // отслеживание ошибок в режиме стрима
@@ -62,9 +63,15 @@ gulp.task('html', () => {
 
 
 gulp.task('js', () => {
-  return gulp.src('src/*.js')
-    .pipe(gulp.dest('dist/'))
-    .pipe(browserSync.stream())
+  return gulp.src([
+    'src/js/**/*.js',
+    'src/libs/**/*.js'
+  ]) 
+    .pipe(plumber())
+		.pipe(rename({dirname: ''}))
+    .pipe(gulp.dest('dist/js'))
+    .pipe(browserSync.reload({
+			stream: true}));
 });
 
 gulp.task('reload', () => {
@@ -76,7 +83,7 @@ gulp.task('reload', () => {
   });
 });
 
-gulp.task('watch', ['reload','css', 'html', 'img', 'fonts', 'js'], () => {
+gulp.task('watch', ['reload','css', 'html', 'js'], () => {
   gulp.watch('src/sass/**/*.scss', ['css']);
   gulp.watch(['src/views/*.html'], ['html'])
   gulp.watch('dist/*.html', browserSync.reload)
