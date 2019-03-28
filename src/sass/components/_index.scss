@@ -190,7 +190,7 @@
     width: 100%;
     overflow-x: hidden;
     overflow-y: auto;
-    padding: 0 0 0 20px;
+    padding: 0 20px 0 20px;
     display: flex;
     flex-direction: column;
     min-height: 360px;
@@ -298,11 +298,16 @@
     &::after {
         content: '';
         display: block;
+        position: absolute;
         right: 10px;
         top: 50%;
         transform: translateY(-50%);
-        border: 20px solid transparent; border-top: 20px solid green; 
+        border: 3px solid transparent; 
+        border-top: 7px solid $black; 
+    }
 
+    &:hover {
+        cursor: pointer;
     }
 }
 
@@ -334,15 +339,72 @@
         @include fontTW-Regular;
         border-radius: 50px;
         border: 1px solid #505050;
-        border:1px solid red;
-    -webkit-border-top-right-radius: 15px;
-    -webkit-border-bottom-right-radius: 15px;
-    -moz-border-radius-topright: 15px;
-    -moz-border-radius-bottomright: 15px;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
     }
 }
+
+.advantages__list {
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    border-top: 1px solid #d7d7d7;
+    margin-top: 10px;
+
+    &-item {
+        position: relative;
+        padding-left: 17px;
+        line-height: 20px;
+        @include fontTW-light;
+        font-size: 13px;
+
+
+        &:before {
+            content: '';
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: url('../img/checkmark.png');
+        }
+    }
+}
+
+.warning__list {
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    border-top: 1px solid #d7d7d7;
+    margin-top: 10px;
+
+    &-item {
+        position: relative;
+        padding-left: 17px;
+        line-height: 20px;
+        @include fontTW-light;
+        font-size: 13px;
+    
+
+        &:before {
+            content: '';
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: url('../img/excla__mark.png');
+        }
+    }
+}
+
+
 .services__boostlist-item--footer {
     display: flex;
     justify-content: space-between;
@@ -371,6 +433,10 @@
             height: 100%;
             border-radius: inherit;
             color: $white;
+
+            &:hover {
+                cursor: pointer;
+            }
         }
 
         .price {
@@ -382,6 +448,21 @@
             color: $black;
             width: 33%;
             padding-right: 5px;
+        }
+    }
+
+    .info {
+        max-width: 34px;
+        min-width: 34px;
+        max-height: 34px;
+        min-height: 34px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url('../img/info.png');
+
+        &:hover {
+            cursor: pointer;
         }
     }
 }
