@@ -222,6 +222,7 @@
         font-family:  Tahoma,Verdana,Segoe,sans-serif; 
         font-size: 11px;
         margin: 10px 0;
+        font-weight: 400;
     }
 
     .services__boostlist-item--quantity {
@@ -246,6 +247,12 @@
             max-height: 24px;
             border-radius: 50%;
             font-size: 20px;
+            box-shadow: none;
+            background-color: inherit;
+            color: inherit;
+            outline: inherit;
+            border-top: 0;
+            border-bottom: 0;
 
             &:hover {
                 cursor: pointer;
@@ -254,15 +261,88 @@
 
         &---plus {
             border-right: 1px solid $textBlack;
+            border-left: 0;
         }
         
         &---minus {
             border-left: 1px solid $textBlack;
+            border-right: 0;
+        }
+
+        .quantity {
+            border: 0;
+            outline: inherit;
+            box-shadow: none;
+            appearance: none;
+            pointer-events: none;
+            min-width: 40px;
+            text-align: center;
+
+            &::-ms-expand{
+                display: none;
+            }
         }
 
     }
 }
 
+.select-wrap {
+    max-width: 220px;
+    width: 100%;
+    height: 24px;
+    border-radius: 50px;
+    border: 1px solid #505050;
+    padding-left: 10px;
+    position: relative;
+
+    &::after {
+        content: '';
+        display: block;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        border: 20px solid transparent; border-top: 20px solid green; 
+
+    }
+}
+
+.services__boostlist-item--select {
+    border: 0;
+    width: calc(100% - 10px);
+    height: 100%;
+    outline: none;
+    appearance: none;
+    @include fontTW-Regular;
+    color: #676767;
+    font-size: 13px;
+    
+
+    &::-ms-expand{
+        display: none;
+    }
+
+    option[disabled]{
+        display: none;
+    }
+
+    option {
+        width: 100%;
+        height: 100%;
+        outline: none;
+        color: #676767;
+        font-size: 13px;
+        @include fontTW-Regular;
+        border-radius: 50px;
+        border: 1px solid #505050;
+        border:1px solid red;
+    -webkit-border-top-right-radius: 15px;
+    -webkit-border-bottom-right-radius: 15px;
+    -moz-border-radius-topright: 15px;
+    -moz-border-radius-bottomright: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    }
+}
 .services__boostlist-item--footer {
     display: flex;
     justify-content: space-between;
@@ -531,7 +611,7 @@
     padding-bottom: 60px;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url('../img/how-bg.png');
+    background-image: url('../img/how-bg.jpg');
     min-height: 965px;
     height: 960px;
 
