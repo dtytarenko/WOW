@@ -33,3 +33,27 @@ $(function() {
   });
 
 });
+
+$(function() {
+  $(".services__boostlist-item .info").on("click", function() {
+    $(this).siblings('.infoblock').slideToggle('fast');
+  });
+
+  $(".infoblock-close").on("click", function() {
+    $(this).parent('.infoblock').slideToggle('fast');
+  });
+});
+
+(function($) {
+  $(function() {
+   
+    $('ul.services__herolist').on('click', 'li:not(.active)', function() {
+      $(this)
+        .addClass('active').siblings().removeClass('active')
+        .closest('div.services-wrap').find('ul.services__boostlist').removeClass('active').eq($(this).index()).addClass('active');
+    });
+
+
+   
+  });
+})(jQuery);
