@@ -19,7 +19,11 @@
     background-image: url('../img/main-bg.png');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 77vh;
+    height: 80vh;
+
+    @media screen and (max-width: 1600px){
+        height: 77vh;
+    }
 
     &__title {
         color: $white;
@@ -50,7 +54,6 @@
     background-color: $white;
     border-radius: 40px;
     position: relative;
-    top: -40px;
     margin-bottom: 80px;
 
     &::after {
@@ -60,15 +63,17 @@
     }
 
     &__title {
-        width: calc(100% - 60px);
-        
+        background-image: url('../img/bend.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        font-weight: normal;
         height: 80px;
         min-height: 80px;
         padding-top: 10px;
         text-align: center;
         text-transform: uppercase;
         position: relative;
-        top: -20px;
+        top: -70px;
         margin: 0 auto;
         border-radius: 40px;
         @include fontTW-Regular;
@@ -83,6 +88,8 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 60px;
+    position: relative;
+    top: -30px;
 }
 
 .services__herolist-item.active{
@@ -396,7 +403,11 @@
         padding-left: 17px;
         line-height: 20px;
         @include fontTW-light;
-        font-size: 13px;
+        font-size: 16px;
+
+        &:not(:last-child){
+            margin-bottom: 5px;
+        }
 
 
         &:before {
@@ -549,7 +560,7 @@
     }
 
     p {
-        font-size: 15px;
+        font-size: 16px;
         line-height: 25px;
         color: $white;
         white-space: pre-line;  
@@ -996,7 +1007,6 @@
     left: 50%;
     transform: translate(-50%, -50%);
     flex-direction: column;
-    box-shadow: 0 0 10px rgba(0, 35, 207, 0.2);
     border-radius: 15px;
     max-width: 600px;
     width: 100%;
