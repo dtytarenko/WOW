@@ -7,15 +7,16 @@
 .footer {
     display: flex;
     flex-direction: column;
-    background-color: $footerBlack;
-    padding-top: 60px;
-    padding-bottom: 40px;
+    background-color: #191b23;
+    padding-top: 30px;
+    padding-bottom: 20px;
 
     p, span {
         @include fontTW-Regular;
         color: $white;
         font-size: 15px;
         line-height: 18px;
+        white-space: pre-line;
     }
 }
 
@@ -55,31 +56,31 @@
 .footer__networks-list--item {
     &:nth-child(1){
         .footer__networks-list--item---link{
-            background-image: url('../img/discord-foter.png');
+            background-image: url('../img/discord.png');
 
             &:hover {
                 cursor: pointer;
-                background-image: url('../img/discord.png')
+                background-image: url('../img/discord-foter.png')
             }
         }
     }
     &:nth-child(2){
         .footer__networks-list--item---link{
-            background-image: url('../img/skype-footer.png');
+            background-image: url('../img/skype.png');
 
             &:hover {
                 cursor: pointer;
-                background-image: url('../img/skype.png')
+                background-image: url('../img/skype-foter.png')
             }
         }
     }
     &:nth-child(3){
         .footer__networks-list--item---link{
-            background-image: url('../img/telegram-footer.png');
+            background-image: url('../img/telegram.png');
 
             &:hover {
                 cursor: pointer;
-                background-image: url('../img/telegram.png')
+                background-image: url('../img/telegram-foter.png')
             }
         }
     }

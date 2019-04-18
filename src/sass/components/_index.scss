@@ -26,7 +26,7 @@
     }
 
     &__title {
-        color: $white;
+        color: #ffd940;
         text-align: center;
         @include fontKG;
         font-size: 70px;
@@ -39,7 +39,8 @@
         @include fontTW-Extralight;
         font-size: 60px;
         line-height: 70px;
-        color: $white;
+        color: #cfd0d6;
+        font-weight: 400;
         letter-spacing: 0.1em;
         text-align: center;
     }
@@ -612,23 +613,21 @@
 .about {
     padding-bottom: 60px;
     box-shadow: 0 3px 50px rgba(0, 35, 207, 0.15);
-    background-color: $white;
-    border-radius: 40px;
-    position: relative;
-    top: -50px;
+    background-color: #191b23;
 
     &__title, h3 {
         @include fontTW-Regular;
         font-size: 50px;
         letter-spacing: 0.1em;
-        color: $textBlack;
+        color: #fff;
         text-align: center;
         margin: 0 auto 50px;
     }
 
     &__subtitle, h4 {
         @include fontTW-light;
-        color: $textBlack;
+        color: #cfd0d6;
+        font-weight: 300;
         font-size: 30px;
         margin-bottom: 30px;
     }
@@ -636,13 +635,15 @@
     &__text, p {
         margin: 30px 0;
         @include fontTW-light;
-        color: $textBlack;
+        color: #9397b2;
         max-width: 800px;
         width: 100%;
         font-size: 24px;
 
+
         span {
             font-weight: 1000;
+            color: #cfd0d6;
         }
 
         &:last-of-type {
@@ -665,26 +666,17 @@
 
     .about__networklist {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         min-height: 120px;
+        min-width: 300px;
 
         .about__networklist-item {
-            margin-right: 15px;
-            margin-left: 15px;
             width: 63px;
             height: 63px;
 
             &:hover {
                 width: 72px;
                 height: 72px;
-            }
-
-            &:first-child {
-                margin-left: 0px;
-            }
-
-            &:last-child {
-                margin-right: 0px;
             }
         }
     }
@@ -735,18 +727,18 @@
 }
 
 .about__list {
-    list-style: square;
+    list-style: disc;
     padding-left: 30px;
     margin-bottom: 80px;
 
     .about__list-item{
-        color: #232323;
+        color: #ffd940;
         font-size: 37px;
 
         .about__list-item--text, p{
             font-size: 30px;
             @include fontTW-light;
-            color: $textBlack;
+            color: #9397b2;
             margin-bottom: 10px;
         }
     }
@@ -777,8 +769,9 @@
 
 
 .policyty {
-    margin-top: 60px;
-    margin-bottom: 60px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #0e0f14;
 
     &__title, h3 {
         @include fontTW-Regular;
@@ -787,20 +780,21 @@
         color: $textBlack;
         margin-bottom: 50px;
         text-align: center;
+        color: #fff;
     }
 
     &__subtitle, h4 {
         @include fontTW-Regular;
         font-size: 30px;
         letter-spacing: 0.1em;
-        color: $textBlack;
+        color: #9397b2;
         line-height: 36px;
         margin-bottom: 10px;
     }
 
     &__text, p {
         font-size: 20px;
-        color: $textBlack;
+        color: #cfd0d6;
         @include fontTW-light;
         line-height: 30px;
         margin-bottom: 30px;
@@ -828,12 +822,13 @@
         font-size: 50px;
         color: $white;
         border-radius: 50px 50px 0 0;
-        background-color: rgba(0, 0, 0, 0.3);
+        background-color: #191b23;
         max-width: 416px;
         text-align: center;
         margin: 0 auto;
         padding: 20px 5px;
         @include fontTW-Regular;
+        font-weight: 400;
     }
 }
 
@@ -859,15 +854,17 @@
         margin-bottom: 80px;
         font-size: 31px;
         line-height: 37px;
-        color: #7F7F7F;
+        color: #6b6f87;
         position: relative;
         padding-left: 92px;
         width: 100%;
         transition: all 0.2s ease;
+        font-weight: 400;
 
         &:hover {
             cursor: pointer;
             opacity: 0.6;
+            color: #cfd0d6;
         }
 
         &:before {
@@ -925,7 +922,7 @@
     }
 
     li.active {
-        color: $white;
+        color: #cfd0d6;
 
         &:after {
             visibility: visible;
@@ -991,12 +988,16 @@
         margin-bottom: 75px;
         font-size: 60px;
         line-height: 72px;
-        letter-spacing: 0.05em;
+        color: #cfd0d6;
+        font-weight: 400;
     }
 
     &-text {
         text-align: center;
         white-space: pre-line;
+        color: #ababab;
+        font-size: 25px;
+        font-weight: 400;
     }
 }
 

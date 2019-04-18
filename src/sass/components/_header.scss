@@ -52,15 +52,15 @@
     line-height: 16px;
     padding-left: 10px;
     padding-right: 10px;
-    color: $white;
+    color: #cfd0d6;
     font-weight: 600;
-    border: 1px solid $white;
+    border: 1px solid #cfd0d6;
     border-radius: 50px;
     transition: all 0.2s ease;
 
     &:hover {
-        color: $black;
-        background-color: $white;
+        color: #0e0f14;
+        background-color: #cfd0d6;
     }
 }
 
