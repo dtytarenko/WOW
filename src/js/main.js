@@ -67,7 +67,15 @@ $(function() {
 })(jQuery);
 
 
+
 document.addEventListener("DOMContentLoaded", function(event) {
-  let introLink = document.getElementById('intro__link');
-  introLink.scrollIntoView();
+  var introLink = document.getElementById('intro__link'); 
+  var servicesBlock = document.getElementById('services');
+
+  function handleButtonClick() {
+    servicesBlock.scrollIntoView({block: "start", behavior: "smooth"});
+  }
+
+  introLink.addEventListener('click', handleButtonClick);
 });
+

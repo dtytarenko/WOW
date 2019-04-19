@@ -137,7 +137,7 @@ body {
         background-size: cover;
         top: 50px;
         z-index: 1;
-        height: 900px;
+        height: 850px;
 
         @media screen and (max-width: 1440px){
             display: none;
@@ -147,7 +147,7 @@ body {
     &:before{
         left: 0;
         background-image: url('../img/Horde.png');
-        width: 532px;
+        width: 502px;
         transform: translateX(-50%);
     }
 
@@ -330,7 +330,8 @@ body {
         justify-content: space-between;
         align-items: center;
         border-radius: 50px;
-        border: 1px solid $textBlack;
+        background-color: #202330;
+        border: 1px solid #cfd0d6;
         max-width: 120px;
         min-width: 80px;
         width: 95px;
@@ -350,7 +351,7 @@ body {
             border-radius: 50%;
             font-size: 20px;
             box-shadow: none;
-            background-color: inherit;
+            background-color: #cfd0d6;
             color: inherit;
             outline: inherit;
             border-top: 0;
@@ -362,12 +363,13 @@ body {
         }
 
         &---plus {
-            border-right: 1px solid $textBlack;
+            border-right: 1px solid #cfd0d6;
             border-left: 0;
+
         }
         
         &---minus {
-            border-left: 1px solid $textBlack;
+            border-left: 1px solid #cfd0d6;
             border-right: 0;
         }
 
@@ -379,6 +381,8 @@ body {
             pointer-events: none;
             min-width: 40px;
             text-align: center;
+            background-color: transparent;
+            color: #cfd0d6;
 
             &::-ms-expand{
                 display: none;
@@ -497,7 +501,7 @@ body {
 
     &-item {
         position: relative;
-        padding-left: 17px;
+        padding-left: 20px;
         line-height: 20px;
         @include fontTW-light;
         font-size: 16px;
@@ -652,11 +656,12 @@ body {
     height: 100%;
     z-index: 10;
     border-radius: 15px;
+    z-index: 30;
 
     svg {
         position: absolute;
-        right: 10px;
-        top: 10px;
+        right: 0px;
+        bottom: 0px;
 
         &:hover {
             cursor: pointer;
@@ -686,6 +691,24 @@ body {
         color: #3DFF8B;
         font-weight: bold;
         @include fontTW-Regular;
+        position: relative;
+        padding-left: 25px;
+
+        &:before {
+            content: '';
+            display: block;
+            width: 18px;
+            height: 18px;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-image: url('../img/time.png');
+
+        }
     }
 }
 
@@ -957,6 +980,7 @@ body {
     display: flex;
     padding-top: 38px;
     padding-bottom: 38px;
+    min-height: 700px;
 }
 
 
@@ -1133,7 +1157,7 @@ body {
     top: 0;
     background-color: inherit;
     filter: blur(100%);
-    background: rgba(0, 0, 0, 0.45);
+    background: rgba(33, 36, 49, 0.75);
 }
 
 .popup{
@@ -1146,7 +1170,6 @@ body {
     border-radius: 15px;
     max-width: 600px;
     width: 100%;
-    background: #fff;
     z-index: 101;
 
     &__close {
@@ -1168,7 +1191,9 @@ body {
     }
 
     &__title {
-        background: rgb(0, 0, 0);
+        background-color: #12131c;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.75);
+        font-weight: 400;
         font-size: 26px;
         @include fontTW-Regular;
         border-top-right-radius: 15px;
@@ -1186,6 +1211,7 @@ body {
         padding: 25px 40px 60px;
         display: flex;
         position: relative;
+        background-color: #202330;
     }
 
     &__column {
@@ -1199,7 +1225,7 @@ body {
         flex-direction: column;
         font-family:  Tahoma,Verdana,Segoe,sans-serif; 
         font-size: 20px;
-        color: $textBlack;
+        color: #9397b2;
         margin-bottom: 20px;
         min-height: 66px;
         height: 66px;
@@ -1214,18 +1240,20 @@ body {
     &__input {
         margin-top: 10px;
         border-radius: 50px;
-        border: 1px solid #505050;
+        border: 1px solid #cfd0d6;
         max-width: 230px;
         width: 100%;
         max-height: 35px;
         min-height: 35px;
         padding-left: 14px;
+        background-color: #cfd0d6;
 
         @include placeholder {
             font-size: 18px;
-            color: #676767;
+            color: #0e0f14;
             @include fontTW-Regular;
             font-weight: 400;
+
         }
     }
 }
@@ -1265,10 +1293,8 @@ body {
     .checkbox__mark {
         position: absolute;
         display: inline-block;
-        min-width: 35px;
-        min-height: 35px;
-        max-width: 35px;
-        max-height: 35px;
+        width: 35px;
+        height: 35px;
         top: 0;
         left: 0;
 
@@ -1278,14 +1304,17 @@ body {
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
-            min-width: 35px;
-            min-height: 35px;
-            max-width: 35px;
-            max-height: 35px;
+            width: 35px;
+            height: 35px;
             background-image: url('../img/uncheck.png');
 
         }
     }
+}
+
+.common-checkbox-wrap .checkbox__wrap .checkbox__mark::before {
+    width: 34px;
+    height: 33px;
 }
 
 .checkbox__wrap input:checked ~ .checkbox__mark::before {
@@ -1301,7 +1330,7 @@ body {
 
 
 .form__submit-wrap {
-    background-color: #d7d7d7;
+    background-color: #4f74ae;
     width: 57%;
     font-size: 16px;
     border-radius: 25px;
@@ -1315,7 +1344,7 @@ body {
     max-height: 50px;
 
     .form__input-submit {
-        background-color: #4073ff;
+        background-color: #ffc12e;
         width: 67%;
         border: 0;
         box-shadow: 0;
@@ -1324,7 +1353,7 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        border-bottom-left-radius: 15px;
+        border-radius: 25px;
         color: #fff;
         font-size: 25px;
         @include fontTW-Regular;
@@ -1343,7 +1372,7 @@ body {
         border-radius: inherit;
         min-height: 50px;
         max-height: 50px;
-        color: $black;
+        color: $white;
         font-size: 25px;
         width: 33%;
         font-family:  Tahoma,Verdana,Segoe,sans-serif; 
