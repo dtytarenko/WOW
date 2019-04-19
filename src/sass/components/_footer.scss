@@ -24,22 +24,42 @@
     display: flex;
     justify-content: center;
     margin-bottom: 60px;
+    position: relative;
+    min-height: 80px;
+    max-width: 300px;
+    margin: 0 auto;
 
     .footer__networks-list--item {
-        margin-right: 15px;
-        margin-left: 15px;
         width: 63px;
         height: 63px;
+        position: absolute;
+        top: 0;
+
+        &:hover {
+            width: 72px;
+            height: 72px;
+        }
 
         &:first-child {
-            margin-left: 0px;
+            left: 0px;
         }
 
-        &:last-child {
-            margin-right: 0px;
+        &:nth-child(2){
+            left: 93px;
         }
 
-        
+        &:nth-child(3){
+            left: 183px;
+        }
+
+        &:nth-child(4){
+            left: 273px;
+        }
+
+        &:nth-child(5){
+            left: 363px;
+        }
+
     }
 }
 
@@ -60,7 +80,7 @@
 
             &:hover {
                 cursor: pointer;
-                background-image: url('../img/discord-foter.png')
+                background-image: url('../img/discord-hover.png')
             }
         }
     }
@@ -70,7 +90,7 @@
 
             &:hover {
                 cursor: pointer;
-                background-image: url('../img/skype-foter.png')
+                background-image: url('../img/skype-hover.png')
             }
         }
     }
@@ -80,7 +100,7 @@
 
             &:hover {
                 cursor: pointer;
-                background-image: url('../img/telegram-foter.png')
+                background-image: url('../img/telegram-hover.png')
             }
         }
     }
