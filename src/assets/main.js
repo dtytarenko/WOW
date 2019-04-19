@@ -65,16 +65,3 @@ $(function() {
  
 });
 })(jQuery);
-
-document.addEventListener("DOMContentLoaded", function(event) {
-  var introLink = document.getElementById('intro__link'); 
-  var servicesBlock = document.getElementById('services');
-  console.log(servicesBlock);
-
-  function handleButtonClick() {
-    servicesBlock.scrollIntoView({block: "start", behavior: "smooth"});
-  }
-
-  introLink.addEventListener('click', handleButtonClick);
-});
-

@@ -65,3 +65,9 @@ $(function() {
  
 });
 })(jQuery);
+
+
+document.addEventListener("DOMContentLoaded", function(event) {
+  let introLink = document.getElementById('intro__link');
+  introLink.scrollIntoView();
+});
