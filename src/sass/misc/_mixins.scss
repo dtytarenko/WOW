@@ -23,7 +23,7 @@
 }
 
 @mixin Laptop {
-    @media screen and (max-width: 1700) {
+    @media screen and (max-width: 1700px) {
       @content;
     }
 }

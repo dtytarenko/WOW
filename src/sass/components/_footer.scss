@@ -7,104 +7,29 @@
 .footer {
     display: flex;
     flex-direction: column;
-    background-color: #191b23;
-    padding-top: 30px;
-    padding-bottom: 20px;
+    background-color: #0e0f14;
+    align-items: center;
+    width: 100%;
+    min-height: 150px;
 
-    p, span {
+    .container {
+        max-width: 1320px;
+    }
+
+    p, span, .footer__text {
         @include fontTW-Regular;
         color: $white;
         font-size: 15px;
         line-height: 18px;
-        white-space: pre-line;
-    }
-}
+        width: 100%;
 
-.footer__networks-list {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 60px;
-    position: relative;
-    min-height: 80px;
-    max-width: 300px;
-    margin: 0 auto;
-
-    .footer__networks-list--item {
-        width: 63px;
-        height: 63px;
-        position: absolute;
-        top: 0;
-
-        &:hover {
-            width: 72px;
-            height: 72px;
-        }
-
-        &:first-child {
-            left: 0px;
-        }
-
-        &:nth-child(2){
-            left: 93px;
-        }
-
-        &:nth-child(3){
-            left: 183px;
-        }
-
-        &:nth-child(4){
-            left: 273px;
-        }
-
-        &:nth-child(5){
-            left: 363px;
-        }
-
-    }
-}
-
-.footer__networks-list--item---link {
-    width: 100%;
-    height: 100%;
-    display: block;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    transition: all 0.2s ease;
-}
-
-.footer__networks-list--item {
-    &:nth-child(1){
-        .footer__networks-list--item---link{
-            background-image: url('../img/discord.png');
-
-            &:hover {
-                cursor: pointer;
-                background-image: url('../img/discord-hover.png')
-            }
-        }
-    }
-    &:nth-child(2){
-        .footer__networks-list--item---link{
-            background-image: url('../img/skype.png');
-
-            &:hover {
-                cursor: pointer;
-                background-image: url('../img/skype-hover.png')
-            }
-        }
-    }
-    &:nth-child(3){
-        .footer__networks-list--item---link{
-            background-image: url('../img/telegram.png');
-
-            &:hover {
-                cursor: pointer;
-                background-image: url('../img/telegram-hover.png')
-            }
+        span {
+            display: block;
+            margin-top: 20px;
         }
     }
 }
+
 //////////////////////////////////////////////////////////
 //
 // END STYLE FOOTER

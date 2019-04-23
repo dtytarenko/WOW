@@ -29,7 +29,14 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: center;
+    }
 
+    .header {
+        .container {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
     }
 
     &__title {
@@ -106,9 +113,24 @@ body {
     padding-bottom: 20px;
     min-height: 900px;
     padding-top: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+    .services-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        @media screen and (max-width: 1600px){
+            justify-content: flex-start;
+        }
+    }
+    
+
+    @media screen and (max-width: 1600px){
+        align-items: flex-start;
+        padding-top: 30px;
+        padding-bottom: 0;
+    }
 
 
     &__title {
@@ -142,7 +164,7 @@ body {
         z-index: 1;
         height: 850px;
 
-        @media screen and (max-width: 1440px){
+        @media screen and (max-width: 1600px){
             display: none;
         }
     }
@@ -160,6 +182,14 @@ body {
         width: 693px;
         transform: translateX(50%);
     }
+
+    .container {
+        height: 100%;
+    }
+}
+
+.services-wrap {
+    height: 100%;
 }
 
 .services__herolist {
@@ -167,6 +197,10 @@ body {
     justify-content: space-between;
     margin-bottom: 100px;
     z-index: 10;
+
+    @media screen and (max-width: 1600px){
+        margin-bottom: 30px;
+    }
 }
 
 .services__herolist-item.active{
@@ -251,7 +285,7 @@ body {
 
 .services__boostlist {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     transition: 1s all ease;
     position: absolute;
     right: -1000%;
@@ -730,9 +764,9 @@ body {
 
 .about {
     padding-top: 20px;
-    box-shadow: 0 3px 50px rgba(0, 35, 207, 0.15);
     background-color: #191b23;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 
@@ -742,7 +776,12 @@ body {
         letter-spacing: 0.1em;
         color: #fff;
         text-align: center;
-        margin: 0 auto 50px;
+        margin: 0 auto 20px;
+        
+        @include Laptop {
+            font-size: 40px;
+            margin: 0 auto 10px;
+        }
     }
 
     &__subtitle, h4 {
@@ -761,6 +800,11 @@ body {
         width: 100%;
         font-size: 24px;
 
+        @include Laptop {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
 
         span {
             font-weight: 1000;
@@ -770,6 +814,10 @@ body {
         &:last-of-type {
             margin-top: 0;
             margin-bottom: 50px;
+
+            @include Laptop {
+                margin-bottom: 20px;
+            }
         }
     }
 
@@ -785,6 +833,31 @@ body {
         height: 100%;
     }
 
+    .footer {
+        display: block;
+        min-height: 150px;
+
+        .container {
+            max-width: 1320px;
+        }
+
+        p, .footer__text {
+            max-width: 1320px;
+            margin: 0;
+            margin-bottom: 0;
+            display: block;
+            z-index: 10;
+
+            span {
+                @include fontTW-Regular;
+                color: $white;
+                font-size: 15px;
+                line-height: 18px;
+                margin-top: 10px;
+            }
+        }
+    }
+
     .about__networklist {
         display: flex;
         justify-content: space-between;
@@ -797,26 +870,44 @@ body {
             height: 63px;
             position: absolute;
             top: 0;
+            transform-origin: 100% 0;
 
             &:hover {
                 width: 72px;
                 height: 72px;
+                transform-origin: center;
             }
 
             &:first-child {
                 left: 0px;
+
+                &:hover {
+                    left: -9px;
+                }
             }
 
             &:nth-child(2){
                 left: 93px;
+
+                &:hover {
+                    left: 86px;
+                }
             }
 
             &:nth-child(3){
                 left: 183px;
+
+                &:hover {
+                    left: 173px;
+                }
             }
 
             &:nth-child(4){
                 left: 273px;
+
+                &:hover{
+                    left: 264px;
+                }
             }
 
             &:nth-child(5){
@@ -834,6 +925,12 @@ body {
     background-size: cover;
     background-position: center;
     transition: all 0.2s ease;
+    z-index: 10;
+    transform-origin: center;
+
+    &:hover {
+        transform-origin: center;
+    }
 
 }
 
@@ -877,16 +974,30 @@ body {
     list-style: disc;
     padding-left: 30px;
     margin-bottom: 80px;
+    width: 100%;
+    z-index: 10;
+
+    @include Laptop {
+        margin-bottom: 20px;
+    }
 
     .about__list-item{
         color: #ffd940;
         font-size: 37px;
+
+        @include Laptop {
+            font-size: 20px;
+        }
 
         .about__list-item--text, p{
             font-size: 30px;
             @include fontTW-light;
             color: #9397b2;
             margin-bottom: 10px;
+
+            @include Laptop {
+                font-size: 24px;
+            }
         }
     }
 }
@@ -897,8 +1008,14 @@ body {
 
 .about__mainimg {
     position: absolute;
-    bottom: -60px; //size of bottom margin
+    bottom: 0px; //size of bottom margin
     right: -300px;
+    z-index: 1;
+
+    @include Laptop {
+        width: 487px;
+        height: 382px;
+    }
 }       
 //////////////////////////////////////////////////////////
 //
@@ -928,11 +1045,15 @@ body {
         margin-bottom: 20px;
         text-align: center;
         color: #fff;
+
+        @include Laptop {
+            font-size: 40px;
+        }
     }
 
     &__subtitle, h4 {
         @include fontTW-Regular;
-        font-size: 30px;
+        font-size: 28px;
         letter-spacing: 0.1em;
         color: #9397b2;
         line-height: 36px;
@@ -940,11 +1061,12 @@ body {
     }
 
     &__text, p {
-        font-size: 20px;
+        font-size: 18px;
         color: #cfd0d6;
         @include fontTW-light;
-        line-height: 30px;
-        margin-bottom: 30px;
+        line-height: 27px;
+        margin-bottom: 20px;
+
     }
 }
 
@@ -979,6 +1101,14 @@ body {
         padding: 20px 5px;
         @include fontTW-Regular;
         font-weight: 400;
+
+        @include Laptop {
+            font-size: 30px;
+        }
+    }
+
+    .container {
+        height: 100%;
     }
 }
 
@@ -992,6 +1122,16 @@ body {
     min-height: 700px;
 }
 
+@media screen and (max-width: 1600px){
+    .tabs{
+        padding-top: 10px;
+        min-height: 600px;
+    }
+
+    .tabs__content{
+        margin-top: 10px;
+    }
+}
 
 .tabs__caption {
     max-width: 390px;
@@ -1109,8 +1249,6 @@ body {
 
 
 .tabs__content {
-    margin-top: 100px;
-    margin-bottom: 100px;
     padding-left: 130px;
     padding-right: 130px;
     display: none;
@@ -1121,6 +1259,10 @@ body {
     width: 100%;
     text-align: center;
     color: $white;
+
+    @media screen and (max-width: 1600px){
+        justify-content: center;
+    }
 
     .img-wrap {
         margin-bottom: 50px;
@@ -1388,3 +1530,8 @@ body {
         padding-right: 5px;
     }
 }
+
+.onepage-pagination {
+    display: none;
+}
+
