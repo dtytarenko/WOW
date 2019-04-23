@@ -1,3 +1,5 @@
+$(".main").onepage_scroll();
+
 (function($) {
   $(function() {
    
@@ -79,4 +81,3 @@ document.addEventListener("DOMContentLoaded", function(event) {
   introLink.addEventListener('click', handleButtonClick);
 });
 
-$(".main").onepage_scroll();

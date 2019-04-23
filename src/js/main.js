@@ -1,3 +1,5 @@
+$(".main").onepage_scroll();
+
 (function($) {
   $(function() {
    

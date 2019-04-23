@@ -103,9 +103,12 @@ body {
 .services {
     background-color: #191b23;
     position: relative;
-    padding-bottom: 40px;
+    padding-bottom: 20px;
     min-height: 900px;
-    padding-top: 30px;
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
 
     &__title {
@@ -726,9 +729,12 @@ body {
 //////////////////////////////////////////////////////////
 
 .about {
-    padding-bottom: 60px;
+    padding-top: 20px;
     box-shadow: 0 3px 50px rgba(0, 35, 207, 0.15);
     background-color: #191b23;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     &__title, h3 {
         @include fontTW-Regular;
@@ -770,13 +776,13 @@ body {
     
 
     .container {
-        margin-top: 60px; // cause we have top shadow
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: center;
         position: relative;
         max-width: 800px;
+        height: 100%;
     }
 
     .about__networklist {
@@ -910,8 +916,8 @@ body {
 
 
 .policyty {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     background-color: #0e0f14;
 
     &__title, h3 {
@@ -919,7 +925,7 @@ body {
         font-size: 50px;
         letter-spacing: 0.1em;
         color: $textBlack;
-        margin-bottom: 50px;
+        margin-bottom: 20px;
         text-align: center;
         color: #fff;
     }
@@ -951,13 +957,16 @@ body {
 
 
 .how {
-    padding-top: 80px;
-    padding-bottom: 60px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url('../img/how-bg.jpg');
     min-height: 965px;
     height: 960px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     &__title, h3 {
         font-size: 50px;
