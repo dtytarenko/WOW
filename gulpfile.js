@@ -14,7 +14,8 @@ const imagemin = require('gulp-imagemin');
 gulp.task('css', () => {
   return gulp
     .src([
-      'src/sass/main.scss'
+      'src/sass/main.scss',
+      'src/libs/**/*.css'
     ]) 
     .pipe(plumber())
 		.pipe(maps.init())
