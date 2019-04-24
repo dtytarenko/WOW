@@ -22,7 +22,6 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
-    background-position: -10px 10px;
     background-color:  #191b23;
 
     .container {
@@ -46,6 +45,7 @@ body {
         font-size: 70px;
         margin-bottom: 25px;
         letter-spacing: 12px;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.75);
 
     }
 
@@ -112,7 +112,7 @@ body {
     position: relative;
     padding-bottom: 20px;
     min-height: 900px;
-    padding-top: 20px;
+    padding-top: 50px;
 
     .services-wrap {
         display: flex;
@@ -128,19 +128,18 @@ body {
 
     @media screen and (max-width: 1600px){
         align-items: flex-start;
-        padding-top: 30px;
+        padding-top: 50px;
         padding-bottom: 0;
     }
 
 
     &__title {
         background-image: url('../img/bend.png');
-        background-position: center;
-        background-repeat: no-repeat;
+        background-position: top;
+        background-repeat: repeat-y;
         font-weight: normal;
-        height: 80px;
-        min-height: 80px;
-        padding-top: 10px;
+        min-height: 120px;
+        padding-top: 40px;
         text-align: center;
         text-transform: uppercase;
         border-radius: 40px;
@@ -149,6 +148,8 @@ body {
         letter-spacing: 0.1em;
         color: #fff;
         margin-top: auto;
+        position: relative;
+        bottom: -10px;
         
     }
 
@@ -229,18 +230,11 @@ body {
         content: '';
         display: block;
         position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        left: -100px;
         width: 176px;
         height: 134px;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
-
-        @media screen and (max-width: 1400px){
-            left: -50px;
-        }
     }
 
     &:hover {
@@ -250,18 +244,28 @@ body {
     &:nth-child(1)::before{
         background-image: url('../img/JREC.png');
         z-index: 29;
+        left: -53px;
+        top: -39px;
     }
 
     &:nth-child(2)::before{
         background-image: url('../img/MORTRED.png');
+        width: 87px;
+        height: 130px;
+        left: -4px;
+        top: -47px;
     }
 
     &:nth-child(3)::before{
         background-image: url('../img/TRAX.png');
+        left: -55px;
+        top: -39px;
     }
 
     &:nth-child(4)::before{
         background-image: url('../img/ILLIDAN.png');
+        left: -54px;
+        top: -39px;
     }
 
     &:not(:last-child){
@@ -835,10 +839,11 @@ body {
 
     .footer {
         display: block;
-        min-height: 150px;
 
         .container {
             max-width: 1320px;
+            justify-content: flex-start;
+            height: inherit;
         }
 
         p, .footer__text {
@@ -854,6 +859,7 @@ body {
                 font-size: 15px;
                 line-height: 18px;
                 margin-top: 10px;
+                font-weight: normal;
             }
         }
     }
@@ -861,7 +867,7 @@ body {
     .about__networklist {
         display: flex;
         justify-content: space-between;
-        min-height: 120px;
+        min-height: 100px;
         min-width: 300px;
         position: relative;
 
@@ -871,18 +877,20 @@ body {
             position: absolute;
             top: 0;
             transform-origin: 100% 0;
+            transition: all 0.2s ease-in-out;
 
             &:hover {
                 width: 72px;
                 height: 72px;
                 transform-origin: center;
+                top: -4.5px;
             }
 
             &:first-child {
                 left: 0px;
 
                 &:hover {
-                    left: -9px;
+                    left: -4px;
                 }
             }
 
@@ -890,7 +898,7 @@ body {
                 left: 93px;
 
                 &:hover {
-                    left: 86px;
+                    left: 89px;
                 }
             }
 
@@ -898,7 +906,7 @@ body {
                 left: 183px;
 
                 &:hover {
-                    left: 173px;
+                    left: 179px;
                 }
             }
 
@@ -906,7 +914,7 @@ body {
                 left: 273px;
 
                 &:hover{
-                    left: 264px;
+                    left: 269px;
                 }
             }
 
@@ -924,7 +932,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    transition: all 0.2s ease;
+    transition: all 0.4s ease-in-out;
     z-index: 10;
     transform-origin: center;
 
@@ -1058,6 +1066,12 @@ body {
         color: #9397b2;
         line-height: 36px;
         margin-bottom: 10px;
+
+        @include Laptop {
+            font-size: 24px;
+            line-height: 28px;
+            margin-bottom: 10px;
+        }
     }
 
     &__text, p {
@@ -1066,6 +1080,12 @@ body {
         @include fontTW-light;
         line-height: 27px;
         margin-bottom: 20px;
+
+        @include Laptop {
+            font-size: 18px;
+            margin-bottom: 10px;
+            line-height: 18px;
+        }
 
     }
 }
