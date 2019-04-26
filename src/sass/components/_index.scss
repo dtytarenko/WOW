@@ -21,7 +21,6 @@ body {
     background-image: url('../img/main-bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
     background-color:  #191b23;
 
     .container {
@@ -1552,6 +1551,44 @@ body {
 }
 
 .onepage-pagination {
-    display: none;
-}
 
+    @include Laptop {
+        right: 20px;
+    }
+
+    li {
+        display: none;
+    }
+
+    li:first-child{
+        display: block;
+
+        a {
+
+    position: fixed;
+    bottom: 50px;
+    right: 115px;
+            width: 70px;
+            height: 70px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.75);
+            background-color: #272937;
+            display: block;
+            border-radius: 50%;
+            cursor: pointer;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-image: url('../img/down.png');
+
+            &::before {
+                display: none;
+            }
+
+            @include Laptop {
+                width: 40px;
+                height: 40px;
+                background-size: 10px;
+            }
+        }
+    }
+}
