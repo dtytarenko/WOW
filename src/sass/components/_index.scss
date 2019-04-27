@@ -249,10 +249,10 @@ body {
 
     &:nth-child(2)::before{
         background-image: url('../img/MORTRED.png');
-        width: 87px;
-        height: 130px;
-        left: -4px;
-        top: -47px;
+        width: 183px;
+        height: 147px;
+        left: -57px;
+        top: -45px;
     }
 
     &:nth-child(3)::before{
@@ -289,18 +289,18 @@ body {
 .services__boostlist {
     display: flex;
     justify-content: center;
-    transition: 1s all ease;
-    position: absolute;
-    right: -1000%;
-    transform: translateX(250%);
 }
 
-.services__boostlist.active {
-    transform: translateX(0);
+.services__boostlist.rage {
+    position: absolute;
+    left: 0;
+    transform: translateX(-250%);
+    transition: 1s all ease;
+}
+
+.services__boostlist.active.rage {
     position: relative;
-    right: inherit;
     transform: translateX(0%);
-    z-index: 10;
 }
 
 .services__boostlist-item {
@@ -1590,5 +1590,86 @@ body {
                 background-size: 10px;
             }
         }
+    }
+}
+
+.services__btn-wrap {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    margin-top: 40px;
+
+    @include Laptop {
+        margin-top: 20px;
+    }
+}
+
+.services__btn {
+    width: 287px;
+    height: 84px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.75);
+    border-radius: 100px;
+    background-color: #212431;
+    font-size: 20px;
+    font-weight: 400;
+    @include fontTW-Regular;
+    color: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    &:not(:last-child){
+        margin-right: 20px;
+    }
+
+    @include Laptop {
+        height: 60px;
+        width: 240px;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.services__btn.active {
+    background-color: #181b26;
+}
+
+.services__descr {
+    width: 100%;
+    position: relative;
+}
+
+.services__list-wrap {
+    display: flex;
+    justify-content: center;
+    transition: 1s all ease;
+    position: absolute;
+    right: 0;
+    transform: translateX(250%);
+    flex-direction: column;
+}
+
+.services__list-wrap.active {
+    transform: translateX(0);
+    position: absolute;
+    right: inherit;
+    z-index: 10;
+    min-height: 500px;
+    width: 100%;
+}
+
+.services__list-wrap {
+    .services__boostlist {
+        display: none;
+    }
+}
+
+.services__list-wrap.active{
+    .services__boostlist{
+        display: flex;
     }
 }

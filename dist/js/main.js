@@ -1,5 +1,3 @@
-
-
 $(".main").onepage_scroll({
   sectionContainer: "section",     // sectionContainer accepts any kind of selector in case you don't want to use section
   easing: "ease",                  // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in",
@@ -16,9 +14,6 @@ $(".main").onepage_scroll({
                                    // the browser's width is less than 600, the fallback will kick in.
   direction: "vertical"            // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".  
 });
-
-
-
 
 (function($) {
   $(function() {
@@ -80,7 +75,7 @@ $(function() {
   $('ul.services__herolist').on('click', 'li:not(.active)', function() {
     $(this)
       .addClass('active').siblings().removeClass('active')
-      .closest('div.services-wrap').find('ul.services__boostlist').removeClass('active').eq($(this).index()).addClass('active');
+      .closest('div.services-wrap').find('div.services__list-wrap').removeClass('active').eq($(this).index()).addClass('active');
   });
 
 
@@ -102,3 +97,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
 });
 
 
+
+
+$('.services__btn-wrap').on('click', 'div:not(.active)', function() {
+  $(this)
+    .addClass('active').siblings().removeClass('active')
+    .closest('div.services__list-wrap').find('ul.services__boostlist').removeClass('active').eq($(this).index()).addClass('active');
+});

@@ -75,7 +75,7 @@ $(function() {
   $('ul.services__herolist').on('click', 'li:not(.active)', function() {
     $(this)
       .addClass('active').siblings().removeClass('active')
-      .closest('div.services-wrap').find('ul.services__boostlist').removeClass('active').eq($(this).index()).addClass('active');
+      .closest('div.services-wrap').find('div.services__list-wrap').removeClass('active').eq($(this).index()).addClass('active');
   });
 
 
@@ -96,3 +96,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
   introLink.addEventListener('click', handleButtonClick);
 });
 
+
+
+
+$('.services__btn-wrap').on('click', 'div:not(.active)', function() {
+  $(this)
+    .addClass('active').siblings().removeClass('active')
+    .closest('div.services__list-wrap').find('ul.services__boostlist').removeClass('active').eq($(this).index()).addClass('active');
+});
