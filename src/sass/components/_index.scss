@@ -1121,6 +1121,12 @@ body {
             font-size: 30px;
         }
     }
+
+    .container {
+        @media screen and (max-width: 1920px){
+            height: 100%;
+        }
+    }
 }
 
 .tabs {
