@@ -182,10 +182,6 @@ body {
         width: 693px;
         transform: translateX(50%);
     }
-
-    .container {
-        height: 100%;
-    }
 }
 
 .services-wrap {
@@ -1125,10 +1121,6 @@ body {
             font-size: 30px;
         }
     }
-
-    .container {
-        height: 100%;
-    }
 }
 
 .tabs {
@@ -1565,9 +1557,9 @@ body {
 
         a {
 
-    position: fixed;
-    bottom: 50px;
-    right: 115px;
+            position: fixed;
+            bottom: 50px;
+            right: 115px;
             width: 70px;
             height: 70px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.75);
@@ -1576,7 +1568,7 @@ body {
             border-radius: 50%;
             cursor: pointer;
             background-repeat: no-repeat;
-            background-size: cover;
+            background-size: auto;
             background-position: center;
             background-image: url('../img/down.png');
 
@@ -1651,6 +1643,8 @@ body {
     right: 0;
     transform: translateX(250%);
     flex-direction: column;
+    visibility: hidden;
+    opacity: 0;
 }
 
 .services__list-wrap.active {
@@ -1660,6 +1654,8 @@ body {
     z-index: 10;
     min-height: 500px;
     width: 100%;
+    opacity: 1;
+    visibility: visible;
 }
 
 .services__list-wrap {
