@@ -21,6 +21,30 @@
             opacity: 0.8;
         }
     }
+    
+    .menu-left {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .region {
+        min-width: 63px;
+        min-height: 23px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.75);
+        border-radius: 12px;
+        background-color: #272937;
+        margin-left: 20px;
+        color: #ffc12e;
+        @include fontTW-Regular;
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: 0.7px;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 .header__nav-list {
