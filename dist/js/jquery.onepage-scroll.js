@@ -374,7 +374,7 @@
     }
 
     if(settings.pagination == true)  {
-      $(".onepage-pagination li a").click(function (){
+      $(".onepage-pagination li a, .intro__btn, .header__nav-list--item---link").click(function (){
         var page_index = $(this).data("index");
         el.moveTo(page_index);
       });

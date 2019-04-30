@@ -53,6 +53,7 @@ $(".button").on("click", function() {
 $(function() {
   $(".services__boostlist-item .info").on("click", function() {
     $(this).siblings('.infoblock').slideToggle('fast');
+    $(this).siblings('.infoblock').css('display', 'flex');
   });
 
   $(".infoblock-close").on("click", function() {
