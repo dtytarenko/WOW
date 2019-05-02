@@ -53,7 +53,7 @@ $(".button").on("click", function() {
 $(function() {
   $(".services__boostlist-item .info").on("click", function() {
     $(this).siblings('.infoblock').slideToggle('fast');
-    $(this).css('display', 'flex');
+    $(this).siblings('.infoblock').css('display', 'flex');
   });
 
   $(".infoblock-close").on("click", function() {
@@ -67,6 +67,12 @@ $(function() {
   $(".overlay, .popup__close").on("click", function() {
     $('.overlay, .popup').slideToggle('fast');
   });
+
+
+  $(".coockies__accept").on("click", function() {
+    $('.cookies__block').css('display', 'none');
+  });
+
 });
 
 (function($) {

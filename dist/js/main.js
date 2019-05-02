@@ -53,7 +53,7 @@ $(".button").on("click", function() {
 $(function() {
   $(".services__boostlist-item .info").on("click", function() {
     $(this).siblings('.infoblock').slideToggle('fast');
-    $(this).css('display', 'flex');
+    $(this).siblings('.infoblock').css('display', 'flex');
   });
 
   $(".infoblock-close").on("click", function() {
@@ -69,11 +69,10 @@ $(function() {
   });
 
 
-  $(".cookies__block").on("click", function() {
+  $(".coockies__accept").on("click", function() {
     $('.cookies__block').css('display', 'none');
   });
 
-  
 });
 
 (function($) {

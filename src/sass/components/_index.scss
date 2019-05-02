@@ -544,7 +544,6 @@ body {
     min-height: 29px;
     height: 29px;
     border-radius: 50px;
-    border: 1px solid #505050;
     padding-left: 10px;
     position: relative;
     margin-bottom: 10px;
@@ -599,6 +598,16 @@ option {
     @include fontTW-Regular;
     border-radius: 50px;
     border: 1px solid #505050;
+    max-width: 220px;
+    min-width: 220px;
+    width: 100%;
+    min-height: 29px;
+    height: 29px;
+    border-radius: 50px;
+    border: 1px solid #505050;
+    padding-left: 10px;
+    position: relative;
+    margin-bottom: 10px;
 }
 }
 
@@ -625,10 +634,14 @@ option {
         &:before {
             content: '';
             position: absolute;
-            width: 14px;
-            height: 14px;
-            top: 5px;
-            left: 0%;
+            min-width: 13px;
+            min-height: 13px;
+            width: 13px;
+            display: block;
+            height: 13px;
+            left: 1px;
+            overflow: visible;
+            top: 3px;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -654,7 +667,7 @@ option {
 
     &-item {
         position: relative;
-        padding-left: 17px;
+        padding-left: 20px;
         line-height: 20px;
         @include fontTW-light;
         font-size: 16px;
@@ -671,16 +684,26 @@ option {
         &:before {
             content: '';
             position: absolute;
+            min-width: 14px;
+            min-height: 14px;
+            display: block;
             width: 14px;
-            height: 14px;
-            top: 5px;
+            height: 13px;
+            top: 3px;
             left: 0%;
             background-position: center;
             background-repeat: no-repeat;
-            background-size: cover;
+            background-size: 13px;
             background-image: url('../img/excla__mark.png');
         }
     }
+}
+
+.warning__list.red {
+    .warning__list-item:before {
+            background-image: url('../img/excla__mark-red.png');
+    }
+    
 }
 
 
@@ -755,14 +778,14 @@ option {
 }
 
 .infoblock {
-    background-color: #000000;
+    background-color: #12131c;
     padding: 40px 20px 20px;
     display: none;
     flex-direction: column;
     justify-content: space-between;
     @include fontTW-light;
     position: absolute;
-    top: 100%;
+    top: 101%;
     transform: translateY(-100%);
     left: 0;
     width: 100%;
@@ -784,13 +807,22 @@ option {
     p {
         font-size: 16px;
         line-height: 25px;
-        color: $white;
+        color: #cfd0d6;
         white-space: pre-line;
+        font-weight: 400;
+
+        strong {
+            font-weight: 600;
+        }
     }
 
     .ETA {
         display: block;
         margin-top: auto;
+        color: #cfd0d6;
+        font-size: 19px;
+        font-weight: 600;
+        line-height: 25px;
     }
 
     
@@ -1809,3 +1841,4 @@ option {
         }
     }
 }
+
