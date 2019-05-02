@@ -37,7 +37,7 @@ $(".button").on("click", function() {
     var newVal = parseFloat(oldValue) + 1;
   } else {
    // Don't allow decrementing below zero
-    if (oldValue >= 1) {
+    if (oldValue > 1) {
       var newVal = parseFloat(oldValue) - 1;
     } else {
       newVal = 1;
@@ -62,6 +62,7 @@ $(function() {
 
   $(".services__boostlist-item--footer .buy").on("click", function() {
     $('.overlay, .popup').slideToggle('fast');
+    $('.overlay, .popup').addClass('active');
   });
 
   $(".overlay, .popup__close").on("click", function() {
@@ -99,3 +100,12 @@ $('.services__btn-wrap').on('click', 'div:not(.active)', function() {
     .addClass('active').siblings().removeClass('active')
     .closest('div.services__list-wrap').find('ul.services__boostlist').removeClass('active').eq($(this).index()).addClass('active');
 });
+
+$(document).keyup(function(e) {
+  if($('.overlay, .popup').hasClass("active")) {
+    if (e.keyCode == 27) { 
+      $('.overlay, .popup').slideToggle('fast');
+    }
+  }
+});
+

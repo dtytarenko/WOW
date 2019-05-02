@@ -539,7 +539,6 @@ body {
 
 
 .select-wrap {
-    max-width: 220px;
     width: 100%;
     min-height: 29px;
     height: 29px;
@@ -576,7 +575,7 @@ outline: none;
 appearance: none;
 @include fontTW-Regular;
 color: #0e0f14;
-font-size: 15px;
+font-size: 16px;
 
 &:hover {
     cursor: pointer;
@@ -879,7 +878,7 @@ option {
 //////////////////////////////////////////////////////////
 
 .about {
-    padding-top: 20px;
+    padding-top: 30px;
     background-color: #191b23;
     display: flex;
     flex-direction: column;
@@ -909,7 +908,7 @@ option {
     }
 
     &__text, p {
-        margin: 30px 0;
+        margin: 15px 0;
         @include fontTW-light;
         color: #9397b2;
         max-width: 800px;
@@ -1147,6 +1146,7 @@ option {
     padding-top: 20px;
     padding-bottom: 20px;
     background-color: #0e0f14;
+    
 
     &__title, h3 {
         @include fontTW-Regular;
@@ -1169,6 +1169,7 @@ option {
         color: #9397b2;
         line-height: 24px;
         margin-bottom: 10px;
+        white-space: pre-line;
 
         @include Laptop {
             font-size: 18px;
@@ -1661,6 +1662,7 @@ option {
 }
 
 .onepage-pagination {
+    transition: all 0.2s ease-in-out;
 
     @include Laptop {
         right: 20px;
