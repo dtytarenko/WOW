@@ -1753,3 +1753,59 @@ option {
         top: 0px;
     }
 }
+
+.cookies__block {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.75);
+    border-radius: 25px;
+    background-color: #191b23;
+    max-width: 295px;
+    position: fixed;
+    bottom: 50px;
+    left: 50px;
+    padding: 15px; 
+
+    p, a {
+        @include fontTW-Regular;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 20px;
+        color: #cfd0d6;
+    }
+
+    p {
+        color: #cfd0d6;
+    }
+
+    a {
+        color: #ffc12e;
+        text-decoration: underline;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+            cursor: pointer;
+            opacity: 0.6;
+        }
+    }
+
+    .coockies__accept {
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.75);
+        border-radius: 25px;
+        background-color: #272937;
+        color: #ffc12e;
+        @include fontTW-Regular;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 20px;
+        max-width: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: auto;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+            cursor: pointer;
+            opacity: 0.6;
+        }
+    }
+}

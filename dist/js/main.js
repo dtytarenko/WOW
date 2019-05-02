@@ -67,6 +67,13 @@ $(function() {
   $(".overlay, .popup__close").on("click", function() {
     $('.overlay, .popup').slideToggle('fast');
   });
+
+
+  $(".cookies__block").on("click", function() {
+    $('.cookies__block').css('display', 'none');
+  });
+
+  
 });
 
 (function($) {

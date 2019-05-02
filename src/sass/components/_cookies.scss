@@ -1,0 +1,69 @@
+@import "../misc/mixins";
+@import "../misc/vars";
+@import "../misc/adjustment";
+
+
+.cookies__main {
+    background-color: #191b23;
+    
+
+    .cookies__section {
+        padding-bottom: 40px;
+    }
+
+    .header {
+        .container {
+            padding-top: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .menu-left {
+            justify-content: flex-start;
+        }
+    }
+
+    .container {
+        padding-top: 160px;
+    }
+
+    .cookies__title {
+        color: #9397b2;
+        font-size: 40px;
+        font-weight: 400;
+        letter-spacing: 2px;
+        line-height: 70px;
+        @include fontTW-Regular;
+    }
+
+    .cookies__content {
+        @include fontTW-Regular;
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: 0.8px;
+        line-height: 20px;
+
+        p, .cookies__text {
+            color: #cfd0d6;
+            font-size: 16px;
+            white-space: pre-line;
+
+            &:not(:last-of-type){
+                margin-bottom: 20px;
+            }
+        }
+
+        h3, .cookes__subtitle {
+            color: #9397b2;
+            font-size: 20px;
+            font-weight: 400;
+        }
+    }
+
+    .footer {
+        .container {
+            padding-top: 15px;
+        }
+    }
+}
